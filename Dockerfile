@@ -6,7 +6,6 @@ ENV LC_ALL=en_US.UTF-8 \
     LANG=en_US.UTF-8 \
     PIPENV_VENV_IN_PROJECT=1
 
-# RUN rpm --import /etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-7
 RUN rpm --import /etc/pki/rpm-gpg/RPM* 
 
 
@@ -34,4 +33,3 @@ RUN python3.6 --version
 RUN pipenv --version
 RUN pip --version
 RUN pip3.6 --version
-RUN ls /etc/pki/rpm-gpg/
