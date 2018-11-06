@@ -27,13 +27,7 @@ RUN pip2 install --upgrade pip
 RUN pip install supervisor
 
 RUN mkdir -p /etc/supervisord.d/
-
 ADD supervisord.conf /etc/supervisord.conf
-
-COPY supervisord.service /lib/systemd/system/
-
-RUN systemctl enable supervisord
-RUN systemctl is-enabled supervisord
 
 RUN python3.6 --version
 RUN pipenv --version
